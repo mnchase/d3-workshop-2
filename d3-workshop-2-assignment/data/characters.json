@@ -1,0 +1,621 @@
+[
+    {
+        "name": "Steven Crain",
+        "played_by": ["Michiel Huisman", "Paxton Singleton"],
+        "number_of_episodes": "10",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "Olivia Crain",
+        "played_by": ["Carla Gugino"],
+        "number_of_episodes": "10",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "Hugh Crain",
+        "played_by": ["Timothy Hutton", "Henry Thomas"],
+        "number_of_episodes": "10",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "Shirley Crain Harris",
+        "played_by": ["Elizabeth Reaser", "Lulu Wilson"],
+        "number_of_episodes": "10",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "Luke Crain",
+        "played_by": ["Oliver Jackson-Cohen", "Julian Hillard"],
+        "number_of_episodes": "10",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "Theodora 'Theo' Crain",
+        "played_by": ["Kate Siegel", "Mckenna Grace"],
+        "number_of_episodes": "10",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "Eleanora 'Nell' Crain Vance",
+        "played_by": ["Victoria Pedretti", "Violet McGraw"],
+        "number_of_episodes": "10",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "Clara Dudley",
+        "played_by": ["Annabeth Gish"],
+        "number_of_episodes": "6",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "Horace Dudley",
+        "played_by": ["Robert Longstreet"],
+        "number_of_episodes": "6",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "Kevin Harris",
+        "played_by": ["Anthony Ruivivar"],
+        "number_of_episodes": "8",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "Leigh Crain",
+        "played_by": ["Samantha Sloyan"],
+        "number_of_episodes": "8",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "Trish Park",
+        "played_by": ["Levy Tran"],
+        "number_of_episodes": "4",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "Ryan Quale",
+        "played_by": ["James Lafferty"],
+        "number_of_episodes": "4",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "Funeral Director",
+        "played_by": ["James Flanagan"],
+        "number_of_episodes": "2",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "Arthur Vance",
+        "played_by": ["Jordane Christie"],
+        "number_of_episodes": "3",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "Aunt Janet",
+        "played_by": ["Elizabeth Becka"],
+        "number_of_episodes": "3",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "Joey",
+        "played_by": ["Anna Enger Ritch"],
+        "number_of_episodes": "2",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "William Hill",
+        "played_by": ["Fedor Steer"],
+        "number_of_episodes": "4",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "Abigail Dudley",
+        "played_by": ["Olive Abercrombie"],
+        "number_of_episodes": "5",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "Poppy Hill",
+        "played_by": ["Catherine Parker"],
+        "number_of_episodes": "3",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "Hazel Hill",
+        "played_by": ["Mimi Gould"],
+        "number_of_episodes": "3",
+        "from": "The Haunting of Hill House"
+    },
+    {
+        "name": "Danielle 'Dani' Clayton",
+        "played_by": ["Victoria Pedretti"],
+        "number_of_episodes": "9",
+        "from": "The Haunting of Bly Manor"
+    },
+    {
+        "name": "Peter Quint",
+        "played_by": ["Oliver Jackson-Cohen"],
+        "number_of_episodes": "9",
+        "from": "The Haunting of Bly Manor"
+    },
+    {
+        "name": "Jamie Taylor",
+        "played_by": ["Amelia Eve", "Carla Gugino"],
+        "number_of_episodes": "9",
+        "from": "The Haunting of Bly Manor"
+    },
+    {
+        "name": "Hannah Grose",
+        "played_by": ["T'Nia Miller"],
+        "number_of_episodes": "9",
+        "from": "The Haunting of Bly Manor"
+    },
+    {
+        "name": "Owen Sharma",
+        "played_by": ["Rahul Kohli", "Kamal Khan"],
+        "number_of_episodes": "9",
+        "from": "The Haunting of Bly Manor"
+    },
+    {
+        "name": "Rebecca Jessel",
+        "played_by": ["Tahirah Sharif"],
+        "number_of_episodes": "9",
+        "from": "The Haunting of Bly Manor"
+    },
+    {
+        "name": "Flora Wingrave",
+        "played_by": ["Amelie Bea Smith", "Christie Burke"],
+        "number_of_episodes": "9",
+        "from": "The Haunting of Bly Manor"
+    },
+    {
+        "name": "Miles Wingrave",
+        "played_by": ["Benjamin Evan Ainsworth", "Thomas Nicholson", "Kasen Kelly"],
+        "number_of_episodes": "9",
+        "from": "The Haunting of Bly Manor"
+    },
+    {
+        "name": "Henry Wingrave",
+        "played_by": ["Henry Thomas", "Duncan Fraser"],
+        "number_of_episodes": "9",
+        "from": "The Haunting of Bly Manor"
+    },
+    {
+        "name": "Charlotte Wingrave",
+        "played_by": ["Alex Essoe"],
+        "number_of_episodes": "3",
+        "from": "The Haunting of Bly Manor"
+    },
+    {
+        "name": "Dominic Wingrave",
+        "played_by": ["Matthew Holness"],
+        "number_of_episodes": "2",
+        "from": "The Haunting of Bly Manor"
+    },
+    {
+        "name": "Edmund 'Eddie' O'Mara",
+        "played_by": ["Roby Attal"],
+        "number_of_episodes": "2",
+        "from": "The Haunting of Bly Manor"
+    },
+    {
+        "name": "Viola Willoughby-Lloyd",
+        "played_by": ["Kate Siegel", "Daniela Dib"],
+        "number_of_episodes": "2",
+        "from": "The Haunting of Bly Manor"
+    },
+    {
+        "name": "Perdita Willoughby-Lloyd",
+        "played_by": ["Katie Parker"],
+        "number_of_episodes": "2",
+        "from": "The Haunting of Bly Manor"
+    },
+    {
+        "name": "James",
+        "played_by": ["Greg Sestero"],
+        "number_of_episodes": "2",
+        "from": "The Haunting of Bly Manor"
+    },
+    {
+        "name": "Erin Greene",
+        "played_by": ["Kate Siegel"],
+        "number_of_episodes": "7",
+        "from": "Midnight Mass"
+    },
+    {
+        "name": "Father Paul Hill",
+        "played_by": ["Hamish Linklater"],
+        "number_of_episodes": "7",
+        "from": "Midnight Mass"
+    },
+    {
+        "name": "Riley Flynn",
+        "played_by": ["Zach Gilford"],
+        "number_of_episodes": "7",
+        "from": "Midnight Mass"
+    },
+    {
+        "name": "Annie Flynn",
+        "played_by": ["Kristin Lehman"],
+        "number_of_episodes": "7",
+        "from": "Midnight Mass"
+    },
+    {
+        "name": "Bev Keane",
+        "played_by": ["Samantha Sloyan"],
+        "number_of_episodes": "7",
+        "from": "Midnight Mass"
+    },
+    {
+        "name": "Warren Flynn",
+        "played_by": ["Igby Rigney"],
+        "number_of_episodes": "7",
+        "from": "Midnight Mass"
+    },
+    {
+        "name": "Sheriff Hassan",
+        "played_by": ["Rahul Kohli"],
+        "number_of_episodes": "7",
+        "from": "Midnight Mass"
+    },
+    {
+        "name": "Leeza Scarborough",
+        "played_by": ["Annarah Cymone"],
+        "number_of_episodes": "7",
+        "from": "Midnight Mass"
+    },
+    {
+        "name": "Dr. Sarah Gunning",
+        "played_by": ["Annabeth Gish"],
+        "number_of_episodes": "7",
+        "from": "Midnight Mass"
+    },
+    {
+        "name": "Mildred Gunning",
+        "played_by": ["Alex Essoe"],
+        "number_of_episodes": "7",
+        "from": "Midnight Mass"
+    },
+    {
+        "name": "Ali Hassan",
+        "played_by": ["Rahul Abburi"],
+        "number_of_episodes": "7",
+        "from": "Midnight Mass"
+    },
+    {
+        "name": "Sturge",
+        "played_by": ["Matt Biedel"],
+        "number_of_episodes": "7",
+        "from": "Midnight Mass"
+    },
+    {
+        "name": "Wade Scarborough",
+        "played_by": ["Michael Trucco"],
+        "number_of_episodes": "7",
+        "from": "Midnight Mass"
+    },
+    {
+        "name": "Dolly Scarborough",
+        "played_by": ["Crystal Balint"],
+        "number_of_episodes": "7",
+        "from": "Midnight Mass"
+    },
+    {
+        "name": "Ooker",
+        "played_by": ["Louis Oliver"],
+        "number_of_episodes": "7",
+        "from": "Midnight Mass"
+    },
+    {
+        "name": "Ed Flynn",
+        "played_by": ["Henry Thomas"],
+        "number_of_episodes": "7",
+        "from": "Midnight Mass"
+    },
+    {
+        "name": "Joe Collie",
+        "played_by": ["Robert Longstreet"],
+        "number_of_episodes": "4",
+        "from": "Midnight Mass"
+    },
+    {
+        "name": "Judge",
+        "played_by": ["Carla Gugino"],
+        "number_of_episodes": "1",
+        "from": "Midnight Mass"
+    },
+    {
+        "name": "Ilonka",
+        "played_by": ["Iman Benson"],
+        "number_of_episodes": "10",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Kevin",
+        "played_by": ["Igby Rigney"],
+        "number_of_episodes": "10",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Anya",
+        "played_by": ["Ruth Codd"],
+        "number_of_episodes": "10",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Sandra",
+        "played_by": ["Annarah Cymone"],
+        "number_of_episodes": "10",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Spencer",
+        "played_by": ["Chris Sumpter"],
+        "number_of_episodes": "10",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Natsuki",
+        "played_by": ["Aya Furukawa"],
+        "number_of_episodes": "10",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Amesh",
+        "played_by": ["Sauriyan Sapkota"],
+        "number_of_episodes": "10",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Tim",
+        "played_by": ["Matt Biedel"],
+        "number_of_episodes": "10",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Shasta",
+        "played_by": ["Samantha Sloyan"],
+        "number_of_episodes": "10",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Mark",
+        "played_by": ["Zach Gilford"],
+        "number_of_episodes": "10",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Dr. Georgina Stanton",
+        "played_by": ["Heather Langenkamp"],
+        "number_of_episodes": "10",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Katherine",
+        "played_by": ["Emilija Baranac"],
+        "number_of_episodes": "5",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Rhett",
+        "played_by": ["Daniel Diemer"],
+        "number_of_episodes": "3",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Aceso",
+        "played_by": ["Katie Parker"],
+        "number_of_episodes": "3",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Julia Jayne",
+        "played_by": ["Larsen Thompson"],
+        "number_of_episodes": "2",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Janitor",
+        "played_by": ["Robert Longstreet"],
+        "number_of_episodes": "2",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Mirror Man",
+        "played_by": ["William B. Davis"],
+        "number_of_episodes": "4",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Maggie",
+        "played_by": ["Crystal Balint"],
+        "number_of_episodes": "2",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Tristan",
+        "played_by": ["Jenaya Ross"],
+        "number_of_episodes": "5",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Freedom Jack",
+        "played_by": ["Henry Thomas"],
+        "number_of_episodes": "1",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Poppy Corn",
+        "played_by": ["Alex Essoe"],
+        "number_of_episodes": "1",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Vincent Beggs",
+        "played_by": ["Rahul Kohli"],
+        "number_of_episodes": "1",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Frederick",
+        "played_by": ["Michael Trucco"],
+        "number_of_episodes": "1",
+        "from": "The Midnight Club"
+    },
+    {
+        "name": "Verna",
+        "played_by": ["Carla Gugino"],
+        "number_of_episodes": "8",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Roderick Usher",
+        "played_by": ["Bruce Greenwood", "Zach Gilford", "Graham Verchere"],
+        "number_of_episodes": "8",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Madeline Usher",
+        "played_by": ["Mary McDonnell", "Willa Fitzgerald", "Lulu Wilson"],
+        "number_of_episodes": "8",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Frederick Usher",
+        "played_by": ["Henry Thomas"],
+        "number_of_episodes": "8",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Camille L'Espanaye",
+        "played_by": ["Kate Siegel"],
+        "number_of_episodes": "8",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Napoleon 'Leo' Usher",
+        "played_by": ["Rahul Kohli"],
+        "number_of_episodes": "8",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Tamerlane Usher",
+        "played_by": ["Samantha Sloyan"],
+        "number_of_episodes": "8",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Victorine LaFourcade",
+        "played_by": ["T'Nia Miller"],
+        "number_of_episodes": "8",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Rufus Griswold",
+        "played_by": ["Michael Trucco"],
+        "number_of_episodes": "8",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Annabel Lee",
+        "played_by": ["Katie Parker"],
+        "number_of_episodes": "8",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Prospero 'Perry' Usher",
+        "played_by": ["Sauriyan Sapkota"],
+        "number_of_episodes": "8",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "William 'Bill-T' Wilson",
+        "played_by": ["Matt Biedel"],
+        "number_of_episodes": "8",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Morella Usher",
+        "played_by": ["Crystal Balint"],
+        "number_of_episodes": "8",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Juno Usher",
+        "played_by": ["Ruth Codd"],
+        "number_of_episodes": "8",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Lenore Usher",
+        "played_by": ["Kyliegh Curran"],
+        "number_of_episodes": "8",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "C. Auguste Dupin",
+        "played_by": ["Carl Lumbly", "Malcolm Goodwin"],
+        "number_of_episodes": "8",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Arthur Gordon Pym",
+        "played_by": ["Mark Hamill"],
+        "number_of_episodes": "8",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Dr. Alessandra 'Ali' Ruiz",
+        "played_by": ["Paola Nuñez"],
+        "number_of_episodes": "5",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Toby",
+        "played_by": ["Igby Rigney"],
+        "number_of_episodes": "3",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Beth 'Tina'",
+        "played_by": ["Aya Furukawa"],
+        "number_of_episodes": "3",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Eliza Usher",
+        "played_by": ["Annabeth Gish"],
+        "number_of_episodes": "1",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "William Longfellow",
+        "played_by": ["Robert Longstreet"],
+        "number_of_episodes": "1",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Mrs. Longfellow",
+        "played_by": ["Sarah-Jane Redmond"],
+        "number_of_episodes": "1",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Jenny",
+        "played_by": ["Molly C. Quinn"],
+        "number_of_episodes": "1",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Faraj",
+        "played_by": ["JayR Tinaco"],
+        "number_of_episodes": "1",
+        "from": "The Fall of the House of Usher"
+    },
+    {
+        "name": "Court Witness",
+        "played_by": ["Alex Essoe"],
+        "number_of_episodes": "1",
+        "from": "The Fall of the House of Usher"
+    }
+]
+

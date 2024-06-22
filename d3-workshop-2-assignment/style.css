@@ -1,0 +1,17 @@
+
+#form {
+    margin-top: 5em;
+    margin-left: 5em;
+}
+.tooltip {
+    position: absolute;
+    text-align: left;
+    width: auto;
+    height: auto;
+    padding: 8px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0.8;
+}
