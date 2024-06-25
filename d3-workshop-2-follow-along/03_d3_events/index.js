@@ -31,18 +31,18 @@ svg.selectAll('.circle')
             //          the first parameter of this callback function is an object with data about the event (called event)
             //          the second parameter of this callback function is an object with data about the specific data item (called d)
 /*********************************************** UNCOMMENT THIS WHEN READY **************************************************/
-            // .on('click', function(event, d){
-            //     console.log('clicked');
+            // .on('click mouseout', function(event, d){
+            //     console.log('clicked or moused out ');
             // })
 /****************************************************************************************************************************/
 /*********************************************** UNCOMMENT THIS WHEN READY **************************************************/
             // .on('mouseover', function(event, d){
-            //     console.log('moused over');
+            //     console.log('moused over ');
             // })
 /****************************************************************************************************************************/
 /*********************************************** UNCOMMENT THIS WHEN READY **************************************************/
             // .on('mouseout', function(event, d){
-            //     console.log('moused out');
+            //     console.log('moused out ');
             // })
 /****************************************************************************************************************************/
 

@@ -163,7 +163,7 @@ let xScale = d3.scaleBand();
 // but first we'll need to clear the svg so we don't just draw the new bars on top of the old bars
 // we can select everything in the svg using "*" and then call .remove() on this selection to remove all the elements in the selection
 /*********************************************** UNCOMMENT THIS WHEN READY **************************************************/
-// svg.selectAll('*').remove()
+// svg.selectAll('*').remove();
 /****************************************************************************************************************************/
 
 
@@ -176,7 +176,7 @@ let xScale = d3.scaleBand();
 
 
 // now let's draw the axes for the bar chart
-// we can do this using d3.axisBottom, d3.axisLeft, d3.axisTop, and/or d3.axisBottom as well as our corresponding scale
+// we can do this using d3.axisBottom, d3.axisLeft, d3.axisTop, and/or d3.axisRight as well as our corresponding scale
 // we pass the corresponding axis to the .call() function property on a newly appended group (this way we can transform the group accordingly)
 
 // note that we use axisLeft for the y scale here. However, you could use axisRight if you choose, but the translate would need to change accordingly.
@@ -186,7 +186,7 @@ let xScale = d3.scaleBand();
 // function drawAxes(x, y) {
 //     let y_axis_transform = `translate(${margin.left}, ${margin.top})`,
 //         x_axis_transform = `translate(${margin.left}, ${margin.top + markHeight})`;
-// 
+//
 //     svg.append('g')
 //         .attr('transform', y_axis_transform)
 //         .call(d3.axisLeft(y).ticks(4));
