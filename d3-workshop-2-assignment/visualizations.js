@@ -113,7 +113,7 @@ function updateBars(data) {
     // select the elements containing the bar class (we will create these later) and give them an empty data object
     let bars = rightSvg.selectAll(`.bar`).data([]);
 
-    // use exit and remove to remove all of the bargroups containing the bars
+    // use exit and remove to remove all of the existing bars
     bars.exit().remove();
 
     // now we can add the new bars we want to display
