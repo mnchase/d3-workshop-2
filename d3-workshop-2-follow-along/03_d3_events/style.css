@@ -1,10 +1,11 @@
 .tooltip {
-    position: absolute;
-    width: auto;
-    height: auto;
-    padding: 8px;
-    font: 12px sans-serif;
-    border-radius: 8px;
-    opacity: 0.8;
-    background-color: lightgrey;
+    position: absolute; /* allows us to move the tooltip div anywhere on the page, even overlapping other html elements */
+    width: auto; /* sets the width to wrap the content in the tooltip */
+    height: auto; /* sets the height to wrap the content in the tooltip */
+    padding: 8px; /* adds some padding around the content in the tooltip */
+    font: 12px sans-serif; /* font size and type set */
+    border-radius: 8px; /* makes the corners of the div round */
+    opacity: 0.8; /* makes the div slightly see-through */
+    pointer-events: none; /* turns off the mouse pointer events for this div, allowing us to select points behind the div when it is transparent */
+    background-color: lightgrey; /* changes the background color of the div to lightgrey */
 }
