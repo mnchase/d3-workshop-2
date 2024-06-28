@@ -46,19 +46,35 @@ svg.selectAll('.circle')
 //          the callback function for d3.brush().on() has a single parameter "event"
 //              this parameter contains a property called "selection" that contains the boundaries of the brushed selection
 /*********************************************** UNCOMMENT THIS WHEN READY **************************************************/
-// let brush = d3.brush()
-//                 .extent([
-//                     [0, 0],
-//                     [width, height]
-//                 ])
-//                 .on('start brush end', function(event){
-//                     console.log(event.selection)
-//                 });
+let brush = d3.brush()
+                .extent([
+                    [0, 0],
+                    [width, height]
+                ])
+                .on('brush end', function(event){
+		    
+                    d3.selectAll('.circle').style('stroke', d => isBrushed(event.selection, d) ? 'black' : 'none');
+                });
 /****************************************************************************************************************************/
 
+function isBrushed(selection, d) {
+	if (selection === null) {return false;}
+	let circleX = d.x
+	let circleY = d.y
+
+	let rightEdge = selection[1][0]
+	let leftEdge = selection[0][0]
+	let topEdge = selection[0][1]
+	let bottomEdge = selection[1][1]
+
+	if (circleX >= leftEdge && circleX <= rightEdge) {
+		return true;
+	}
+	else return false;
+}
 
 
 // similar to how we call axes, we create a new group and call the brush on it
 /*********************************************** UNCOMMENT THIS WHEN READY **************************************************/
-// svg.append('g').call(brush)
+svg.append('g').call(brush)
 /****************************************************************************************************************************/

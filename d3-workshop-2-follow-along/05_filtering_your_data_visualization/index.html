@@ -5,11 +5,21 @@
         <div id="main"></div>
         <div>
             <!-- UNCOMMENT THIS WHEN READY -->
-            <!-- <form name="biomeFilter">
-                <label for="filter">Temperature Cutoff</label>
+            <form name="biomeFilter">
+                <!-- <label for="filter">Temperature Cutoff</label>
                 <input id="filter" name="filter" type="text" />
                 <button type="button" onclick="filterData()">Change Cutoff</button>
-            </form> -->
+		-->
+	    	<select id='biomes' name='biomes' onchange="filterData()">
+		    <option value='all'>All</option>
+		    <option value='aquatic'>Aquatic</option>
+		    <option value='grassland'>Grassland</option>
+		    <option value='forest'>Forest</option>
+		    <option value='desert'>Desert</option>
+		    <option value='tundra'>Tundra</option>
+	        </select>
+	    	<label for='biomes'>Change the Biomes We Visualize</label>
+            </form>
             <!------------------------------->
         </div>
     </body>

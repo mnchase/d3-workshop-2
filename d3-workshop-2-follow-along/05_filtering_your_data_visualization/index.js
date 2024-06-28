@@ -74,31 +74,38 @@ drawScatterPlot();
 
 
 /*********************************************** UNCOMMENT THIS WHEN READY **************************************************/
-// function filterData() {
-//     let cutoff = d3.select('#filter').property('value');
-//     console.log(biomes.filter(d => d.avg_temp_celsius <= cutoff))
-//     drawDots(biomes.filter(d => d.avg_temp_celsius <= cutoff))
-//     console.log()
-// }
+function filterData() {
+   //  let cutoff = d3.select('#filter').property('value');
+   //  console.log(biomes.filter(d => d.avg_temp_celsius <= cutoff))
+   //  drawDots(biomes.filter(d => d.avg_temp_celsius <= cutoff))
+   //  console.log()
+    let biome = d3.select('#biomes').property('value')
+    drawDots(biomes.filter(d => {
+	if (biome === 'all') {
+	    return true;
+	}
+	return d.name === biome
+    }))
+}
 /****************************************************************************************************************************/
 
 
 
 /*********************************************** UNCOMMENT THIS WHEN READY **************************************************/
-// function drawDots(data) {
-//     let circleGroup = d3.select('#circlegroup');
+function drawDots(data) {
+    let circleGroup = d3.select('#circlegroup');
 
-//     let circles = circleGroup.selectAll('.biome').data(data);
+    let circles = circleGroup.selectAll('.biome').data(data);
 
-//     circles.enter()
-//             .append('circle')
-//                 .merge(circles)
-//                 .attr('class', 'biome')
-//                 .attr('cx', d => xScale(d.avg_temp_celsius))
-//                 .attr('cy', d => yScale(d.annual_precipation_cm))
-//                 .attr('r', 5)
-//                 .style('fill', d => colorScale(d.name));
+    circles.enter()
+            .append('circle')
+                .merge(circles)
+                .attr('class', 'biome')
+                .attr('cx', d => xScale(d.avg_temp_celsius))
+                .attr('cy', d => yScale(d.annual_precipation_cm))
+                .attr('r', 5)
+                .style('fill', d => colorScale(d.name));
   
-//     circles.exit().remove();
-// }
+    circles.exit().remove();
+}
 /****************************************************************************************************************************/

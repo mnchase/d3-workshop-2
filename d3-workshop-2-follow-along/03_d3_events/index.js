@@ -31,23 +31,33 @@ svg.selectAll('.circle')
             //          the first parameter of this callback function is an object with data about the event (called event)
             //          the second parameter of this callback function is an object with data about the specific data item (called d)
 /*********************************************** UNCOMMENT THIS WHEN READY **************************************************/
-            // .on('click mouseout', function(event, d){
-            //     console.log('clicked or moused out ');
-            // })
+            .on('click mouseout', function(event, d){
+                console.log('clicked or moused out ');
+            })
 /****************************************************************************************************************************/
 /*********************************************** UNCOMMENT THIS WHEN READY **************************************************/
-            // .on('mouseover', function(event, d){
-            //     console.log('moused over ');
-            // })
+            .on('mouseover', function(event, d){
+               // console.log('moused over ');
+		d3.select(this).style('stroke', 'black');
+		tooltip.html(d.text).style('left', event.clientX+'px').style('top', event.clientY+'px');
+		tooltip.transition()
+			.duration(1000)
+			.style('opacity', 0.8);
+
+            })
 /****************************************************************************************************************************/
 /*********************************************** UNCOMMENT THIS WHEN READY **************************************************/
-            // .on('mouseout', function(event, d){
+            .on('mouseout', function(event, d){
             //     console.log('moused out ');
-            // })
+		d3.select(this).style('stroke', 'none');
+		tooltip.transition()
+			.duration(1000)
+			.style('opacity', 0);
+            })
 /****************************************************************************************************************************/
 
 
 
 /*********************************************** UNCOMMENT THIS WHEN READY **************************************************/
-// let tooltip = d3.select('body').append('div').attr('class', 'tooltip').style('opacity', 0);
+let tooltip = d3.select('body').append('div').attr('class', 'tooltip').style('opacity', 0);
 /****************************************************************************************************************************/

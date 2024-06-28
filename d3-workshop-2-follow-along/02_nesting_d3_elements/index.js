@@ -66,10 +66,10 @@ console.log(sectorG);
 //         attr('r', function(d) { return radiusScale(d.value.total); }) sets the radius of each circle to the corresponding sector's total price (d.value.total)
 //         and attr('fill', '#ccc') will apply the color '#ccc' to each circle
 /*********************************************** UNCOMMENT THIS WHEN READY **************************************************/
-// sectorG.append('circle')
-//             .attr('r', function(d) {
-//                 return radiusScale(d.value.total);
-//             }).style('fill', '#ccc');
+sectorG.append('circle')
+            .attr('r', function(d) {
+                return radiusScale(d.value.total);
+            }).style('fill', '#ccc');
 /****************************************************************************************************************************/
 
 
@@ -84,7 +84,7 @@ console.log(sectorG);
 //              Since we called selectAll on sectorG, the _groups property of sectorG becomes the _parents property of our new selection
 //              this selection's parents are therefore the three html group elements 
 /*********************************************** UNCOMMENT THIS WHEN READY **************************************************/
-// console.log(sectorG.selectAll('.company'));
+console.log(sectorG.selectAll('.company'));
 /****************************************************************************************************************************/
 
 
@@ -101,18 +101,18 @@ console.log(sectorG);
 // If we check the console, we can see that the _groups property of companyG contains an array
 //      each element of this array is a nested array containing the company groups for the corresponding sector
 /*********************************************** UNCOMMENT THIS WHEN READY **************************************************/
-// let companyG = sectorG.selectAll('.company')
-//                         .data(function(d) {
-//                             return d.value.companies;
-//                         })
-//                         .enter()
-//                             .append('g')
-//                                 .attr('class', 'company')
-//                                 .attr('transform', function(d) {
-//                                     return 'translate('+d.pos+')';
-//                                 });
-//
-// console.log(companyG);
+let companyG = sectorG.selectAll('.company')
+                        .data(function(d) {
+                            return d.value.companies;
+                        })
+                        .enter()
+                            .append('g')
+                                .attr('class', 'company')
+                                .attr('transform', function(d) {
+                                    return 'translate('+d.pos+')';
+                                });
+
+console.log(companyG);
 /****************************************************************************************************************************/
 
 
@@ -122,11 +122,11 @@ console.log(sectorG);
 //         attr('r', function(d) { return radiusScale(d.price); }) sets the radius of each circle to the corresponding company's price (d.price)
 //         and attr('fill', function(d) { return d.color; }) will apply the corresponding company object's specified color (d.color) to the circle
 /*********************************************** UNCOMMENT THIS WHEN READY **************************************************/
-// companyG.append('circle')
-//             .attr('r', function(d) {
-//                 return radiusScale(d.price);
-//             })
-//             .style('fill', function(d) {
-//                 return d.color;
-//             });
+companyG.append('circle')
+            .attr('r', function(d) {
+                return radiusScale(d.price);
+            })
+            .style('fill', function(d) {
+                return d.color;
+            });
 /****************************************************************************************************************************/
