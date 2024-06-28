@@ -1,3 +1,4 @@
+// toy data about earth biomes
 const biomes = [
     { name: 'aquatic',   avg_temp_celsius: 10, annual_precipation_cm: 100 },
     { name: 'grassland', avg_temp_celsius: 15, annual_precipation_cm: 200 },
@@ -6,6 +7,7 @@ const biomes = [
     { name: 'tundra',    avg_temp_celsius: 5 , annual_precipation_cm: 60 }
 ]
 
+// svg dimensions
 const width = 600, height = 400;
 const margin = {
     top: 50,
@@ -16,12 +18,15 @@ const margin = {
 const markWidth = width - margin.left - margin.right;
 const markHeight = height - margin.top - margin.bottom;
 
+// create our svg and give it a width and height
 const svg = d3.select('#main').append('svg').attr('width', width).attr('height', height);
 
+// scales for x and y axes as well as color
 const xScale = d3.scaleLinear().domain([0, 60]).range([0, markWidth]);
 const yScale = d3.scaleLinear().domain([0, 450]).range([markHeight, 0]);
 const colorScale = d3.scaleOrdinal().domain(biomes.map(d => d.name)).range(d3.schemeSet2);
 
+// drawDots function, clears existing dots and redraws them
 function drawDots(data) {
     let circleGroup = d3.select('#circlegroup');
 
@@ -31,13 +36,13 @@ function drawDots(data) {
         .data(data)
         .enter()
             .append('circle')
-                
                 .attr('cx', d => xScale(d.avg_temp_celsius))
                 .attr('cy', d => yScale(d.annual_precipation_cm))
                 .attr('r', 5)
                 .style('fill', d => colorScale(d.name));
 }
 
+// drawScatterPlot function, draws the initial scatterplot with axes and labels
 function drawScatterPlot() {
     svg.append('g')
         .attr('transform', `translate(${margin.left},${margin.top})`)

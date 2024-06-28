@@ -120,7 +120,9 @@ function updateBars(data) {
     /**************************************************************************************************************************************/
     /************************* TODO: Select the elements containing the bar class and give them the data object ***************************/
     /************************* Hint: the parameter of updateBars called "data" may be useful                    ***************************/
+    /************************* NOTE: Make sure to update the bars variable with your new selection              ***************************/
     /**************************************************************************************************************************************/
+    bars = undefined;
 
     // enter the data and append a rectangle for each data element with the necessary attributes
     bars.enter()
