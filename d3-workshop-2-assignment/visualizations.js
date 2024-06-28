@@ -49,27 +49,21 @@ const barWidthPadded = barWidth - (barMargin.left + barMargin.right);
 const colors = d3.schemeSet2;
 
 // scale function that maps each show to a color
-/**************************************************************************************************************************************/
-/**************************** TODO: Update colorDomain and colorRange to have the appropriate values **********************************/
-/**************************************************************************************************************************************/
-const colorDomain = undefined;
-const colorRange = undefined;
+/
+const colorDomain = shows.filter(d => d != 'All');
+const colorRange = colors;
 const colorScale = d3.scaleOrdinal().domain(colorDomain).range(colorRange);
 
 // scale function that maps the actors age to an x coordinate on the scatter plot
-/**************************************************************************************************************************************/
-/************************* TODO: Update scatterXDomain and scatterXRange to have the appropriate values *******************************/
-/**************************************************************************************************************************************/
-const scatterXDomain = undefined;
-const scatterXRange = undefined;
+/
+const scatterXDomain = [0, 100];
+const scatterXRange = [0, scatterWdthPadded];
 const scatterXScale = d3.scaleLinear().domain(scatterXDomain).range(scatterXRange);
 
 // scale function that maps the number of episodes to a y coordinate on the scatter plot
-/**************************************************************************************************************************************/
-/************************* TODO: Update scatterYDomain and scatterYRange to have the appropriate values *******************************/
-/**************************************************************************************************************************************/
-const scatterYDomain = undefined;
-const scatterYRange = undefined;
+/
+const scatterYDomain = [0, 10];
+const scatterYRange = [scatterHeightPadded, 0];
 const scatterYScale = d3.scaleLinear().domain(scatterYDomain).range(scatterYRange);
 
 // scale function that maps the total number of episodes to an x coordinate on the bar chart
@@ -81,11 +75,8 @@ const barXScale = d3.scaleLinear().domain(barXDomain).range(barXRange);
 let barYScale = d3.scaleBand().padding(0.4).align(0.5);
 
 // html div element that you will use in your hover interaction for the scatter plot
-/**************************************************************************************************************************************/
-/*********************** TODO: Append a fully transparent div with class "tooltip" to the body of the html ****************************/
-/*********************** TODO: Store this div in the scatterTooltip variable                               ****************************/
-/**************************************************************************************************************************************/
-const scatterTooltip = undefined;
+/
+const scatterTooltip = d3.select('body').append('div').attr('class', 'tooltip').style('opacity', 0);
 
 /*****************************************************************************************************************************/
 /*********************************** EXTRA CREDIT (1): Create a tooltip for the bar chart  ***************************************/

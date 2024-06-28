@@ -4,7 +4,8 @@ const cats = [
     { breed: 'siberian', num_sightings: 15 },
     { breed: 'ragdoll', num_sightings: 5 },
     { breed: 'sphynx', num_sightings: 2 },
-    { breed: 'bengal', num_sightings: 7 }
+    { breed: 'bengal', num_sightings: 7 },
+    { breed: 'bengal', num_sightings: 25 }
 ]
 
 // svg dimensions
@@ -264,7 +265,7 @@ let rainScale = d3.scaleLinear().domain([0, 3]).range([markHeight, 0]);
 
 // let's clear the svg again before creating our line chart
 /*********************************************** UNCOMMENT THIS WHEN READY **************************************************/
-svg.selectAll('*').remove();
+// svg.selectAll('*').remove();
 /****************************************************************************************************************************/
 
 
@@ -290,6 +291,6 @@ function drawLine() {
 
 }
 
-drawLine();
-drawAxes(timeScale, rainScale);
+// drawLine();
+// drawAxes(timeScale, rainScale);
 /****************************************************************************************************************************/
