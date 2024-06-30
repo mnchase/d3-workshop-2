@@ -74,9 +74,7 @@ let barYScale = d3.scaleBand().padding(0.4).align(0.5);
 // html div element that you will use in your hover interaction for the scatter plot
 const scatterTooltip = d3.select('body').append('div').attr('class', 'tooltip').style('opacity', 0);
 
-/*****************************************************************************************************************************/
-/*********************************** EXTRA CREDIT (1): Create a tooltip for the bar chart  ***************************************/
-/*****************************************************************************************************************************/
+const barTooltip = d3.select('body').append('div').attr('class', 'tooltip').style('opacity', 0);
 
 // function you will call to update the bar chart each time the scatter plot is brushed
 // this function is also initially called in drawBarChart 
@@ -113,15 +111,40 @@ function updateBars(data) {
                 .attr('transform', `translate(${barMargin.left},${barMargin.top})`)
                 .attr('class', 'bar')
                 .attr('x', 0)
-		.attr('y', (d,i) => {
-			return heightOfEachBar*i
-		})
-		.attr('height', heightOfEachBar)
+		.attr('y', (d) => barYScale(d.actor))
+		.attr('height', heightOfEachBar*0.5)
 		.attr('width', d => barXScale(d.total_num_episodes))
                 .attr('fill', 'lightgrey')
-                /*****************************************************************************************************************************/
-                /***************************** EXTRA CREDIT (1): Add hover functionality to the bars  ****************************************/
-                /*****************************************************************************************************************************/
+		// create an event handler that shows a tooltip when the user mouses over a bar
+                .on('mouseover', function(event, d){
+		    d3.select(this).attr('fill', 'grey');
+		    const xLoc = event.clientX + window.pageXOffset
+		    const yLoc = event.clientY + window.pageYOffset
+
+		    function characterID(d) {
+			return characters.filter(e => e.played_by.includes(d.actor))
+				.map(e => {return e.name+' - '+e.number_of_episodes+' episodes'})
+				.reduce((a,c) => a+'<br>'+c)
+		    }
+
+                    // change the color of the tooltip background and the from attribute of this bar
+               	    barTooltip.style('background', 'lightgrey')
+		        .style('left', xLoc+'px')
+			.style('top', yLoc+'px')
+			.style('white-space', 'nowrap')
+			.html('Characters:<br>'+ characterID(d))
+			.transition()
+			.style('opacity', 0.9)
+
+                    })
+                    // create an event handler that hides the tooltip when the user mouses away from the dot
+                .on('mouseout', function(event){
+                    // transition the color of "this" bar to have a value of lightgrey
+                    d3.select(this).transition().duration(50).attr('fill', 'lightgrey')
+                                        
+                    // transition the opacity of the tooltip back to a value of 0
+                    barTooltip.transition().style('opacity', 0);
+                })
 
     // remove the existing y axis
     d3.select('#y_axis').remove()
@@ -165,13 +188,13 @@ function isBrushed(extent, d) {
         pointY = scatterYScale(d.number_of_episodes) + scatterMargin.top
 
         // x coordinate for the leftmost edge of the brush selection
-    let brushRegionLeftX = extent[0][0],
+    let brushRegionLeftX = extent[0][0]-3,
         // y coordinate for the topmost edge of the brush selection
-        brushRegionTopY = extent[0][1],
+        brushRegionTopY = extent[0][1]-3,
         // x coordinate for the rightmost edge of the brush selection
-        brushRegionRightX = extent[1][0],
+        brushRegionRightX = extent[1][0]+3,
         // y coordinate for the bottommost edge of the brush selection
-        brushRegionBottomY = extent[1][1]
+        brushRegionBottomY = extent[1][1]+3
 
     if (pointX < brushRegionRightX && pointX > brushRegionLeftX && pointY < brushRegionBottomY && pointY > brushRegionTopY) {
 	return true;
@@ -193,11 +216,9 @@ function drawScatterPlot(data) {
                     ])
                     // create a handler for what happens when the brush is brushing and when it finishes brushing
                     .on('brush end', function(event){
-                        /**************************************************************************************************************************************/
-                        /******** TODO: Create a function that sets the color of the selected points to the appropriate color using colorScale ****************/
-                        /********       This function should set the color of points that were not selected to "lightgrey"                     ****************/
-                        /**************************************************************************************************************************************/
-                        let colorHandler = undefined;
+                        let colorHandler = function(d) {
+			    return isBrushed(event.selection, d) ? colorScale(d.from) : 'lightgrey'
+			};
                         
                         // select all of the dots on the scatter plot and set their fill style to colorHandler
                         d3.selectAll('.actorDot').style('fill', colorHandler)
@@ -214,10 +235,7 @@ function drawScatterPlot(data) {
                         updateBars(brushed_actors)
                     })
     
-    /**************************************************************************************************************************************/
-    /********************************* TODO: Call the brush within a group we append to the scatter plot **********************************/
-    /**************************************************************************************************************************************/
-
+    leftSvg.append('g').call(brush)
     
     // create a group for each of the characters in our data object
     let characterGroup = leftSvg.selectAll('.characterGroup')
@@ -249,20 +267,22 @@ function drawScatterPlot(data) {
                                     // create an event handler that shows a tooltip when the user mouses over a dot
                                     .on('mouseover', function(event, d){
 					d3.select(this).attr('r', 6);
+					const xLoc = event.clientX + window.pageXOffset
+					const yLoc = event.clientY + window.pageYOffset
 
                                         // change the color of the tooltip background using colorScale and the from attribute of this dot
                                         scatterTooltip.style('background', colorScale(d.from))
-					    .style('opacity', 0.9)
-					    .style('left', event.clientX+'px')
-					    .style('top', event.clientY+'px')
+					    .style('left', xLoc+'px')
+					    .style('top', yLoc+'px')
 					    .html('Character: '+d.name+'<br>Actor: '+d.actor+'<br>Show: '+d.from)
+					    .transition().style('opacity', 0.9)
                                     })
                                     // create an event handler that hides the tooltip when the user mouses away from the dot
                                     .on('mouseout', function(event){
                                         // transition the radius of "this" dot to have a value of 6
                                         d3.select(this).transition().attr('r', 4)
                                         
-                                        // transition the opacity of hte tooltip back to a value of 0
+                                        // transition the opacity of the tooltip back to a value of 0
                                         scatterTooltip.transition().style('opacity', 0);
                                     })
                                     // make the dots half see-through
