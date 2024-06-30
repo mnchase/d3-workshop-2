@@ -49,19 +49,16 @@ const barWidthPadded = barWidth - (barMargin.left + barMargin.right);
 const colors = d3.schemeSet2;
 
 // scale function that maps each show to a color
-/
 const colorDomain = shows.filter(d => d != 'All');
 const colorRange = colors;
 const colorScale = d3.scaleOrdinal().domain(colorDomain).range(colorRange);
 
 // scale function that maps the actors age to an x coordinate on the scatter plot
-/
 const scatterXDomain = [0, 100];
-const scatterXRange = [0, scatterWdthPadded];
+const scatterXRange = [0, scatterWidthPadded];
 const scatterXScale = d3.scaleLinear().domain(scatterXDomain).range(scatterXRange);
 
 // scale function that maps the number of episodes to a y coordinate on the scatter plot
-/
 const scatterYDomain = [0, 10];
 const scatterYRange = [scatterHeightPadded, 0];
 const scatterYScale = d3.scaleLinear().domain(scatterYDomain).range(scatterYRange);
@@ -75,7 +72,6 @@ const barXScale = d3.scaleLinear().domain(barXDomain).range(barXRange);
 let barYScale = d3.scaleBand().padding(0.4).align(0.5);
 
 // html div element that you will use in your hover interaction for the scatter plot
-/
 const scatterTooltip = d3.select('body').append('div').attr('class', 'tooltip').style('opacity', 0);
 
 /*****************************************************************************************************************************/
@@ -87,10 +83,7 @@ const scatterTooltip = d3.select('body').append('div').attr('class', 'tooltip').
 function updateBars(data) {
     // compute the height of the bar chart based on the number of actors that were selected by the brush
     barHeight = heightOfEachBar*data.length + barMargin.top + barMargin.bottom;
-    
-    /**************************************************************************************************************************************/
-    /************************* TODO: Set the bar chart's height attribute to the computed "barHeight" value *******************************/
-    /**************************************************************************************************************************************/
+    rightSvg.attr('height', barHeight)
 
     // compute the height of the bar chart excluding margins
     let barHeightPadded = barHeight - (barMargin.top + barMargin.bottom);
@@ -108,12 +101,11 @@ function updateBars(data) {
     bars.exit().remove();
 
     // now we can add the new bars we want to display
-    /**************************************************************************************************************************************/
-    /************************* TODO: Select the elements containing the bar class and give them the data object ***************************/
-    /************************* Hint: the parameter of updateBars called "data" may be useful                    ***************************/
-    /************************* NOTE: Make sure to update the bars variable with your new selection              ***************************/
-    /**************************************************************************************************************************************/
-    bars = undefined;
+    bars = rightSvg.selectAll('.bar').data(data.sort((a,b) => {
+	if (a.actor < b.actor){ return 1;}
+	if (a.actor > b.actor){ return -1;}
+	return 0})
+    );
 
     // enter the data and append a rectangle for each data element with the necessary attributes
     bars.enter()
@@ -121,9 +113,11 @@ function updateBars(data) {
                 .attr('transform', `translate(${barMargin.left},${barMargin.top})`)
                 .attr('class', 'bar')
                 .attr('x', 0)
-                /*****************************************************************************************************************************/
-                /***************************** TODO: Update the y, width, and height attributes of the bars **********************************/
-                /*****************************************************************************************************************************/
+		.attr('y', (d,i) => {
+			return heightOfEachBar*i
+		})
+		.attr('height', heightOfEachBar)
+		.attr('width', d => barXScale(d.total_num_episodes))
                 .attr('fill', 'lightgrey')
                 /*****************************************************************************************************************************/
                 /***************************** EXTRA CREDIT (1): Add hover functionality to the bars  ****************************************/
@@ -145,9 +139,11 @@ function drawBarChart() {
     updateBars(actors)
 
     let xAxisTransform = 'translate(' + barMargin.left + ',' + (barMargin.top) + ')';
-    /**************************************************************************************************************************************/
-    /****************************** TODO: Draw the x axis inside of a group using d3.axisTop and barXScale ********************************/
-    /**************************************************************************************************************************************/
+    rightSvg.append('g')
+	.attr('id', 'x_axis')
+	.attr('class', 'y_axis')
+	.attr('transform', xAxisTransform)
+	.call(d3.axisTop(barXScale));
 
     // add a label to the x axis by appending a text element
     rightSvg.append('g')

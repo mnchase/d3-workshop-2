@@ -19,7 +19,7 @@ function handleData (data) {
         return {
             actor: d,
             age: actor_ages[d],
-            total_num_episodes: +characters.filter(e => e.played_by.includes(d)).map(e => e.number_of_episodes).reduce((a,c) => a+c)
+            total_num_episodes: +characters.filter(e => e.played_by.includes(d)).map(e => {return e.number_of_episodes}).reduce((a,c) => a+c)
         }
     })
 
