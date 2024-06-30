@@ -248,22 +248,14 @@ function drawScatterPlot(data) {
                                     .attr('r', 4)
                                     // create an event handler that shows a tooltip when the user mouses over a dot
                                     .on('mouseover', function(event, d){
-                                        /***********************************************************************************************/
-                                        /*************** TODO: Transition the radius of "this" dot to have a value of 6 ****************/
-                                        /***********************************************************************************************/
+					d3.select(this).attr('r', 6);
 
                                         // change the color of the tooltip background using colorScale and the from attribute of this dot
                                         scatterTooltip.style('background', colorScale(d.from))
-                                        
-                                        /***********************************************************************************************/
-                                        /*************** TODO: Transition the opacity of the tooltip to have a value of .9 *************/
-                                        /***********************************************************************************************/
-
-                                        /***********************************************************************************************/
-                                        /***** TODO: Set the html of the tooltip to have a list of labels of the dot's attributes      */
-                                        /***** TODO: Style the left of the tooltip to be the x position where the mouse event occurred */
-                                        /***** TODO: Style the top of the tooltip to be the y position where the mouse event occurred  */
-                                        /***********************************************************************************************/
+					    .style('opacity', 0.9)
+					    .style('left', event.clientX+'px')
+					    .style('top', event.clientY+'px')
+					    .html('Character: '+d.name+'<br>Actor: '+d.actor+'<br>Show: '+d.from)
                                     })
                                     // create an event handler that hides the tooltip when the user mouses away from the dot
                                     .on('mouseout', function(event){
