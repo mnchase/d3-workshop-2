@@ -49,7 +49,7 @@ const barWidthPadded = barWidth - (barMargin.left + barMargin.right);
 const colors = d3.schemeSet2;
 
 // scale function that maps each show to a color
-const colorDomain = shows.filter(d => d != 'All');
+const colorDomain = shows;
 const colorRange = colors;
 const colorScale = d3.scaleOrdinal().domain(colorDomain).range(colorRange);
 
@@ -173,9 +173,10 @@ function isBrushed(extent, d) {
         // y coordinate for the bottommost edge of the brush selection
         brushRegionBottomY = extent[1][1]
 
-    /**************************************************************************************************************************************/
-    /******** TODO: Return a boolean expression that is "true" if and only if the point "d" is within the brush selection *****************/
-    /**************************************************************************************************************************************/
+    if (pointX < brushRegionRightX && pointX > brushRegionLeftX && pointY < brushRegionBottomY && pointY > brushRegionTopY) {
+	return true;
+    }
+    return false
 }
 
 function drawScatterPlot(data) {    
@@ -231,10 +232,11 @@ function drawScatterPlot(data) {
                             .data(function(d) {
                                 return d.played_by.map(function(e){
                                     return {
-                                        /*********************************************************************************************************************/
-                                        /*************** TODO: Set the attributes of this object (name, actor, age, number_of_episodes, from) ****************/
-                                        /*************** Hint: These attributes may rely on "d" or "e"                                        ****************/
-                                        /*********************************************************************************************************************/
+					name: d.name,
+					actor: e,
+					age: actors.find((a) => a.actor === e).age,
+					number_of_episodes: d.number_of_episodes,
+					from: d.from
                                     }
                                 })
                             })
@@ -273,10 +275,8 @@ function drawScatterPlot(data) {
                                     })
                                     // make the dots half see-through
                                     .style('opacity', 0.5)
-                                    /***********************************************************************************************/
-                                    /********** TODO: Set the color of the dots using colorScale according to the tv show **********/
-                                    /***********************************************************************************************/
-                       
+                       		    .style('fill', d => colorScale(d.from))
+
     // draw the x axis inside of a group using d3.axisBottom and scatterXScale, set the number of ticks to 5
     let xAxisTransform = 'translate(' + scatterMargin.left + ',' + (scatterHeight - scatterMargin.bottom) + ')';
     leftSvg.append('g')
@@ -330,6 +330,6 @@ function makeVisualizations() {
     
 
     // call functions to draw the scatter plot and bar chart for the first time
-    drawScatterPlot(characters)
+    drawScatterPlot(characters, actors)
     drawBarChart()
 }
